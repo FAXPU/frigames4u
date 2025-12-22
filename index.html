@@ -5,122 +5,231 @@
   <title>FRIGAMES4u</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-  line-height: 1.6;
-}
-.game {
-  box-shadow: 0 0 10px #00ff99;
-  transition: transform 0.2s;
-}
-.game:hover {
-  transform: scale(1.02);
-}
-
+    /* Body & general */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #0d0d0d;
       color: white;
+      line-height: 1.6;
     }
+
+    /* Header */
     header {
       background: #111;
       padding: 20px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     header h1 {
       color: #00ff99;
-      margin: 0;
+      margin: 5px 0;
     }
+    header p {
+      margin: 5px 0;
+    }
+
+    /* Navigation */
+    nav {
+      margin: 10px 0;
+    }
+    nav a {
+      color: #00ccff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffaa00;
+    }
+
+    /* Container */
     .container {
       padding: 20px;
     }
+
+    /* Section title */
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 15px;
+      color: #ffaa00;
+      border-bottom: 2px solid #00ff99;
+      padding-bottom: 5px;
+    }
+
+    /* Game boxes */
     .game {
       background: #1a1a1a;
       border-radius: 10px;
       padding: 15px;
       margin-bottom: 15px;
+      box-shadow: 0 0 10px #00ff99;
+      transition: transform 0.2s;
     }
-    .game h2 {
+    .game:hover {
+      transform: scale(1.02);
+    }
+    .game h3 {
       color: #00ccff;
       margin-top: 0;
     }
-    .game a {
-      color: #00ff99;
-      text-decoration: none;
-      font-weight: bold;
+    .game p {
+      margin: 5px 0;
     }
+
+    /* Buttons */
+    a.download-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 5px;
+    }
+    a.download-btn:hover {
+      background: #00cc66;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 15px;
       background: #111;
       color: #777;
+      margin-top: 20px;
+    }
+
+    /* Images */
+    .game img {
+      max-width: 200px;
+      display: block;
+      margin-bottom: 10px;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <p>
-  <a href="help.html">How to Download</a>
-</p>
   <h1>FRIGAMES4u</h1>
-  <p>Free, Fast, Reliable Forever.</p>
+  <p>Free, Fast, Reliable Forever</p>
+  <nav>
+    <a href="#friday">Friday Pick</a> |
+    <a href="#top">Top Picks</a> |
+    <a href="#trending">Trending</a> |
+    <a href="#horror">Horror</a> |
+    <a href="#help">Help</a>
+  </nav>
 </header>
 
 <div class="container">
-   <h2 class="section-title">🔥Friday Pick🔥</h2>
 
-<div class="game">
-  <h3>🥇 | Plants Vs Zombies</h3>
-  <p>Play Plants Vs Zombies the old Edition | 
-    -Run on low-end devices
-    -Windows XP, etc
-    -1GB RAM
-    -65MB space
-  Hand picked for you</p>
-  <a href="https://www.mediafire.com/file/9zgqwrnd7mlt933/Plants_Vs_Zombies.rar/file" target="_blank">Download</a>
-</div>
+  <!-- Friday Pick -->
+  <h2 id="friday" class="section-title">🔥 Friday Pick 🔥</h2>
+
   <div class="game">
-  <h3>🥈 | PES 2010</h3>
-  <p>Play Pro Evolution Soccer (PES) 2010! | 
-  -Windows XP, Windows Vista, etc
-  -Memory (RAM): 1 GB
-  -Storage: 6 GB free space
-  -Graphics: Nvidia GeForce FX / ATI Radeon 9700 with 128MB VRAM, DirectX 9.0c, Shader Model 2.0 
-  Hand picked for you</p>
-  <a href="https://www.mediafire.com/file/9zgqwrnd7mlt933/Plants_Vs_Zombies.rar/file" target="_blank">Download</a>
-</div>
+    <h3>🥇 Plants Vs Zombies</h3>
+    <p>Play Plants Vs Zombies the old Edition | 
+      - Run on low-end devices<br>
+      - Windows XP, etc<br>
+      - 1GB RAM<br>
+      - 65MB space<br>
+      Hand picked for you</p>
+    <a class="download-btn" href="https://www.mediafire.com/file/9zgqwrnd7mlt933/Plants_Vs_Zombies.rar/file" target="_blank">Download</a>
   </div>
-     <h2 class="section-title">💀Horror Games😨</h2>
 
-<div class="game">
-  <h3>FNAF 1</h3>
-  <p>Play FNAF 1! |
-    -Windows XP, Vista, Windows 7, etc
-  -Processor: 2 GHz Intel Pentium 4 or AMD Athlon equivalent
-  -Memory (RAM): 1 GB
-  -Graphics: 1 GB Video Card (DirectX 9.0 compatible)
-  -Storage: 250 MB available space
-  -DirectX: Version 9.0 </p>
-  <a href="https://www.mediafire.com/file/w619s8rpov0vdhj/Five_Nights_at_Freddy%2527s.zip/file" target="_blank">Download</a>
-</div>
   <div class="game">
-  <h3>House Of The Dead 3</h3>
-  <p>Play House Of The Dead 3! |
-  -Windows 98/Me/2000/XP
-  -(CPU): Intel Pentium III 1.0 GHz minimum; Intel Pentium 4 1.4 GHz recommended
-  -(RAM): 128 MB minimum; 256 MB recommended
-  -(GPU): Direct 3D compatible, 64 MB of VRAM or more, DirectX 9.0c compatible
-  -450 MB minimum; 700 MB recommended
-  -DirectX: Version 9.0b or above  </p>
-  <a href="https://www.mediafire.com/file/qq1a0i82fw0qfph/House-of-the-Dead-3-DownloadComputerGames.net.zip/file" target="_blank">Download</a>
-</div>
+    <h3>🥈 PES 2010</h3>
+    <p>Play Pro Evolution Soccer (PES) 2010! | 
+      - Windows XP, Vista, etc<br>
+      - Memory: 1 GB RAM<br>
+      - Storage: 6 GB free space<br>
+      - Graphics: Nvidia GeForce FX / ATI Radeon 9700 with 128MB VRAM, DirectX 9.0c<br>
+      Hand picked for you</p>
+    <a class="download-btn" href="https://www.mediafire.com/file/9zgqwrnd7mlt933/Plants_Vs_Zombies.rar/file" target="_blank">Download</a>
+  </div>
 
-   
+  <!-- Top Picks -->
+  <h2 id="top" class="section-title">⭐ Top Picks ⭐</h2>
+
+  <div class="game">
+    <h3>Super Mario 64</h3>
+    <p>Classic Mario experience. Works on almost any PC.</p>
+    <a class="download-btn" href="#" target="_blank">Download</a>
+  </div>
+
+  <div class="game">
+    <h3>Minecraft Classic</h3>
+    <p>Free classic edition. Block-building fun.</p>
+    <a class="download-btn" href="https://classic.minecraft.net/" target="_blank">Play Online</a>
+  </div>
+
+  <!-- Trending -->
+  <h2 id="trending" class="section-title">📈 Trending 📈</h2>
+
+  <div class="game">
+    <h3>Among Us</h3>
+    <p>Popular multiplayer game. Cross-platform free demo available.</p>
+    <a class="download-btn" href="#" target="_blank">Download</a>
+  </div>
+
+  <!-- Horror Games -->
+  <h2 id="horror" class="section-title">💀 Horror Games 😨</h2>
+
+  <div class="game">
+    <h3>FNAF 1</h3>
+    <p>Play FNAF 1!<br>
+      - Windows XP, Vista, 7<br>
+      - Processor: 2 GHz Intel Pentium 4 or AMD equivalent<br>
+      - RAM: 1 GB<br>
+      - Graphics: DirectX 9 compatible<br>
+      - Storage: 250 MB</p>
+    <a class="download-btn" href="https://www.mediafire.com/file/w619s8rpov0vdhj/Five_Nights_at_Freddy%2527s.zip/file" target="_blank">Download</a>
+  </div>
+
+  <div class="game">
+    <h3>House Of The Dead 3</h3>
+    <p>Play House Of The Dead 3!<br>
+      - Windows 98/Me/2000/XP<br>
+      - CPU: Pentium III 1.0 GHz minimum<br>
+      - RAM: 128 MB minimum<br>
+      - GPU: Direct3D compatible, 64 MB VRAM<br>
+      - Storage: 450 MB minimum</p>
+    <a class="download-btn" href="https://www.mediafire.com/file/qq1a0i82fw0qfph/House-of-the-Dead-3-DownloadComputerGames.net.zip/file" target="_blank">Download</a>
+  </div>
+
+  <!-- Help Section -->
+  <h2 id="help" class="section-title">❓ How to Download Games</h2>
+
+  <div class="game">
+    <h3>Step-by-Step Guide</h3>
+    <p>
+      1. Click the <b>Download</b> button on any game.<br>
+      2. You will be redirected to the official website (itch.io, Steam, MediaFire, etc).<br>
+      3. Choose your platform and download.<br>
+      4. Install and play.<br>
+      5. Enjoy FRIGAMES4u!
+    </p>
+  </div>
+
+  <div class="game">
+    <h3>Important Notes</h3>
+    <p>
+      • All games are <b>free and legal</b>.<br>
+      • We do NOT host files ourselves.<br>
+      • Broken link? The game was updated or removed.<br>
+      • Always scan downloaded files if unsure.
+    </p>
+  </div>
+
 </div>
 
 <footer>
-  <p>© 2025 FRIGAMES4u | Made for Gamers</p>
+  <p>© 2025 FRIGAMES4u | Made for Gamers | <a href="mailto:youremail@example.com" style="color:#00ccff;">Contact</a></p>
 </footer>
 
 </body>
