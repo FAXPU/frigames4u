@@ -31,6 +31,17 @@
       margin: 5px 0;
     }
 
+    /* Search bar */
+    #searchBar {
+      width: 95%;
+      padding: 10px;
+      margin: 10px auto 20px auto;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
     /* Navigation */
     nav {
       margin: 10px 0;
@@ -103,18 +114,12 @@
       margin-top: 20px;
     }
 
-    /* Images */
-    .game img {
-      max-width: 200px;
-      display: block;
-      margin-bottom: 10px;
-      border-radius: 5px;
-    }
   </style>
 </head>
 <body>
 
 <header>
+  <input type="text" id="searchBar" placeholder="Search games..." />
   <h1>FRIGAMES4u</h1>
   <p>Free, Fast, Reliable Forever</p>
   <nav>
@@ -129,7 +134,7 @@
   <!-- Friday Pick -->
   <h2 id="friday" class="section-title">🔥 Friday Pick 🔥</h2>
 
-  <div class="game">
+  <div class="game" data-title="Plants Vs Zombies">
     <h3>🥇 Plants Vs Zombies</h3>
     <p>Play Plants Vs Zombies the old Edition | 
       - Run on low-end devices<br>
@@ -140,78 +145,55 @@
     <a class="download-btn" href="https://www.mediafire.com/file/9zgqwrnd7mlt933/Plants_Vs_Zombies.rar/file" target="_blank">Download</a>
   </div>
 
-  <div class="game">
+  <div class="game" data-title="PES 2010">
     <h3>🥈 PES 2010</h3>
     <p>Play Pro Evolution Soccer (PES) 2010! | 
       - Windows XP, Vista, etc<br>
       - Memory: 1 GB RAM<br>
       - Storage: 6 GB free space<br>
-      - Graphics: Nvidia GeForce FX / ATI Radeon 9700 with 128MB VRAM, DirectX 9.0c<br>
-      Hand picked for you</p>
+      - Graphics: Nvidia GeForce FX / ATI Radeon 9700</p>
     <a class="download-btn" href="https://www.mediafire.com/file/9zgqwrnd7mlt933/Plants_Vs_Zombies.rar/file" target="_blank">Download</a>
   </div>
 
   <!-- Horror Games -->
-<h2 id="horror" class="section-title">💀 Horror Games 😨</h2>
+  <h2 id="horror" class="section-title">💀 Horror Games 😨</h2>
 
-<div class="game">
-  <h3>FNAF 1</h3>
-  <p>Play FNAF 1!</p>
-  <ul>
-    <li>Windows XP, Vista, 7</li>
-    <li>Processor: 2 GHz Intel Pentium 4 or AMD equivalent</li>
-    <li>RAM: 1 GB</li>
-    <li>Graphics: DirectX 9 compatible</li>
-    <li>Storage: 250 MB</li>
-  </ul>
-  <a class="download-btn" href="https://www.mediafire.com/file/w619s8rpov0vdhj/Five_Nights_at_Freddy%2527s.zip/file" target="_blank">Download</a>
-</div>
+  <div class="game" data-title="FNAF 1 Five Nights at Freddy's">
+    <h3>FNAF 1</h3>
+    <p>Play FNAF 1!</p>
+    <a class="download-btn" href="https://www.mediafire.com/file/w619s8rpov0vdhj/Five_Nights_at_Freddy%2527s.zip/file" target="_blank">Download</a>
+  </div>
 
-<div class="game">
-  <h3>House Of The Dead 3</h3>
-  <p>Play House Of The Dead 3!</p>
-  <ul>
-    <li>Windows 98/Me/2000/XP</li>
-    <li>CPU: Pentium III 1.0 GHz minimum</li>
-    <li>RAM: 128 MB minimum</li>
-    <li>GPU: Direct3D compatible, 64 MB VRAM</li>
-    <li>Storage: 450 MB minimum</li>
-  </ul>
-  <a class="download-btn" href="https://www.mediafire.com/file/qq1a0i82fw0qfph/House-of-the-Dead-3-DownloadComputerGames.net.zip/file" target="_blank">Download</a>
-</div>
-  <div class="game">
-  <h3>That's not my neighbor</h3>
-  <p>Play That's not my neighbor!</p>
-  <ul>
-    <li>OS: Windows 10 (64-bit) or newer.</li>
-    <li>Processor: ~2 GHz (64-bit).</li>
-    <li>Memory: 2 GB RAM.</li>
-    <li>Graphics: Vulkan-compatible (like Intel UHD 630 or better).</li>
-    <li>DirectX: Version 10.</li>
-    <li>Storage: 500 MB available space (or 10GB for some PC versions). </li>
-  </ul>
-  <a class="download-btn" href="https://www.mediafire.com/file/gjxoia4v7gyrnnn/That's-not-my-neighbor.zip/file" target="_blank">Download</a>
-</div>
+  <div class="game" data-title="House Of The Dead 3">
+    <h3>House Of The Dead 3</h3>
+    <p>Play House Of The Dead 3!</p>
+    <a class="download-btn" href="https://www.mediafire.com/file/qq1a0i82fw0qfph/House-of-the-Dead-3-DownloadComputerGames.net.zip/file" target="_blank">Download</a>
+  </div>
 
+  <div class="game" data-title="That's Not My Neighbor">
+    <h3>That's not my neighbor</h3>
+    <p>Play That's not my neighbor!</p>
+    <a class="download-btn" href="https://www.mediafire.com/file/gjxoia4v7gyrnnn/That's-not-my-neighbor.zip/file" target="_blank">Download</a>
+  </div>
 
   <!-- Help Section -->
   <h2 id="help" class="section-title">❓ How to Download Games</h2>
 
-  <div class="game">
+  <div class="game" data-title="How to Download Games Help Guide">
     <h3>Step-by-Step Guide</h3>
     <p>
       1. Click the <b>Download</b> button on any game.<br>
-      2. You will be redirected to the official website or an external media file sharing.<br>
-      3. Choose your platform and download (optinal).<br>
-      4. Install and play(Extract .ZIP Files if needed).<br>
+      2. You will be redirected to the official website or external link.<br>
+      3. Choose your platform.<br>
+      4. Install and play.<br>
       5. Enjoy FRIGAMES4u!
     </p>
   </div>
 
-  <div class="game">
+  <div class="game" data-title="Important Notes">
     <h3>Important Notes</h3>
     <p>
-      • All games are <b>free and legal</b>.<br>
+      • All games are free and legal.<br>
       • Broken link? The game was updated or removed.<br>
       • Always scan downloaded files if unsure.
     </p>
@@ -220,8 +202,23 @@
 </div>
 
 <footer>
-  <p>© 2025 FRIGAMES4u | Made for Gamers | <a href="mailto:faresel1212@gmail.com" style="color:#00ccff;">Contact</a></p>
+  <p>© 2025 FRIGAMES4u | Made for Gamers | 
+    <a href="mailto:faresel1212@gmail.com" style="color:#00ccff;">Contact</a></p>
 </footer>
+
+<script>
+  const searchBar = document.getElementById('searchBar');
+  const games = document.querySelectorAll('.game');
+
+  searchBar.addEventListener('input', () => {
+      const term = searchBar.value.toLowerCase();
+
+      games.forEach(game => {
+          const title = game.dataset.title.toLowerCase();
+          game.style.display = title.includes(term) ? '' : 'none';
+      });
+  });
+</script>
 
 </body>
 </html>
